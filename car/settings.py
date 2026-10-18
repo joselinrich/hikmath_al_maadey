@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-dgjh19h(o7+wikf3@rcd9ce5qb3kfzp%(mbe+)ho&r&tznbdb6'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False  # Production-ல் எரர் வராமல் இருக்க False இருப்பது நல்லது
 
 ALLOWED_HOSTS = ['hikmath-al-maadey.onrender.com', 'localhost', '127.0.0.1', '*']
 
@@ -44,7 +44,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-     'corsheaders.middleware.CorsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -136,15 +136,3 @@ MEDIA_ROOT = BASE_DIR / 'media'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-
-# settings.py
-
-# Email Configuration (Gmail SMTP)
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'joselinrichs@gmail.com'
-EMAIL_HOST_PASSWORD = 'jzfq edgm ijzy tzyu'  # App Password
-DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
