@@ -1,0 +1,307 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<!-- Hero Section -->
+<div class="hero-wrap ftco-degree-bg bg-hero"
+     data-stellar-background-ratio="0.5"
+     style="background-image: url({% static 'images/istockphoto-2232356780-612x612.jpg' %});">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row no-gutters slider-text justify-content-start align-items-center justify-content-center">
+      <div class="col-lg-8 ftco-animate">
+        <div class="text w-100 text-center mb-md-5 pb-md-5">
+          <h1 class="mb-4">HEKMAT AL MAADEY</h1>
+          <p style="font-size: 20px;" class="fw-bold text-white">
+            Elevator & Escalators Inst. & Maint. LLC
+          </p>
+
+          <!-- Lift Video Link Updated Here -->
+          <a href="https://www.youtube.com/watch?v=x1aA0mD8sF8"
+             class="icon-wrap popup-youtube d-flex align-items-center mt-4 justify-content-center">
+            <div class="icon d-flex align-items-center justify-content-center">
+              <span class="ion-ios-play"></span>
+            </div>
+            <div class="heading-title ml-3">
+              <span>Watch Our Working Process</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Request Inspection & Process Highlights -->
+<section class="ftco-section ftco-no-pt bg-light">
+  <div class="container">
+    <div class="row no-gutters">
+      <div class="col-md-12 featured-top">
+        <div class="row no-gutters">
+          
+          <!-- Quick Service Request Form -->
+          <div class="col-md-4 d-flex align-items-center">
+            <!-- UPDATED FORM WITH INDEPENDENT ACTION AND NUMBERS ONLY FIELD -->
+            <form action="{% url 'carbook:free_inspection' %}" method="POST" class="request-form ftco-animate bg-primary">
+              {% csrf_token %}
+              <h2>Request Free Inspection</h2>
+
+              <div class="form-group">
+                <label class="label">Your Name</label>
+                <input type="text" name="name" class="form-control" placeholder="Full Name" required>
+              </div>
+
+              <div class="form-group">
+                <label class="label">Phone / WhatsApp</label>
+                <!-- NUMBERS ONLY INPUT -->
+                <input type="tel" 
+                       name="phone" 
+                       class="form-control" 
+                       placeholder="+971 XX XXX XXXX" 
+                       inputmode="numeric" 
+                       pattern="[0-9+ ]*" 
+                       oninput="this.value = this.value.replace(/[^0-9+ ]/g, '')" 
+                       required>
+              </div>
+
+              <div class="form-group">
+                <label class="label">Service Required</label>
+                <select name="service" class="form-control style-select" style="color: black;" required>
+                  <option value="">Select Service Type</option>
+                  <option value="New Lift Installation">New Lift Installation</option>
+                  <option value="Annual Maintenance (AMC)">Annual Maintenance (AMC)</option>
+                  <option value="Lift Modernization">Lift Modernization</option>
+                  <option value="Emergency Repair">Emergency Repair</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="label">Building Location</label>
+                <input type="text" name="location" class="form-control" placeholder="City or Area" required>
+              </div>
+
+              <div class="form-group">
+                <button type="submit" class="btn btn-secondary py-3 px-4 w-100">Submit Request</button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Process Highlights -->
+          <div class="col-md-8 d-flex align-items-center">
+            <div class="services-wrap rounded-right w-100">
+              <h3 class="heading-section mb-4">
+                Smart Vertical Mobility Solutions
+              </h3>
+
+              <div class="row d-flex mb-4">
+                <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+                  <div class="services w-100 text-center">
+                    <div class="icon d-flex align-items-center justify-content-center">
+                      <span class="flaticon-route"></span>
+                    </div>
+                    <div class="text w-100">
+                      <h3 class="heading mb-2">Site Inspection & Planning</h3>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+                  <div class="services w-100 text-center">
+                    <div class="icon d-flex align-items-center justify-content-center">
+                      <span class="flaticon-handshake"></span>
+                    </div>
+                    <div class="text w-100">
+                      <h3 class="heading mb-2">Precision Installation</h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+                  <div class="services w-100 text-center">
+                    <div class="icon d-flex align-items-center justify-content-center">
+                      <span class="ion-ios-time"></span>
+                    </div>
+                    <div class="text w-100">
+                      <h3 class="heading mb-2">24/7 Safety & Maintenance</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <p>
+                <a href="{% url 'carbook:services' %}" class="btn btn-primary py-3 px-4">
+                  Explore Our Services
+                </a>
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Featured Elevator Systems Section -->
+<section class="ftco-section ftco-no-pt bg-light">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-12 heading-section text-center ftco-animate mb-5">
+        <span class="subheading">What We Offer</span>
+        <h2 class="mb-2">Our Featured Elevator Systems</h2>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="carousel-car owl-carousel">
+
+          <!-- Product 1 -->
+          <div class="item">
+            <div class="car-wrap rounded ftco-animate">
+              <div class="img rounded d-flex align-items-end"
+                   style="background-image: url({% static 'images/elv p.jpg' %});">
+              </div>
+              <div class="text">
+                <h2 class="mb-0"><a href="{% url 'carbook:car' %}">Passenger Elevators</a></h2>
+                <div class="d-flex mb-3">
+                  <span class="cat">High-Speed & Smooth Ride</span>
+                </div>
+                <p class="d-flex mb-0 d-block">
+                  <a href="{% url 'carbook:contact' %}" class="btn btn-primary py-2 mr-1">Inquire Now</a>
+                  <a href="{% url 'carbook:services' %}" class="btn btn-secondary py-2 ml-1">Details</a>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div class="item">
+            <div class="car-wrap rounded ftco-animate">
+              <div class="img rounded d-flex align-items-end"
+                   style="background-image: url({% static 'images/glass.jpg' %});">
+              </div>
+              <div class="text">
+                <h2 class="mb-0"><a href="{% url 'carbook:car' %}">Panoramic Glass Lifts</a></h2>
+                <div class="d-flex mb-3">
+                  <span class="cat">Modern Architectural Design</span>
+                </div>
+                <p class="d-flex mb-0 d-block">
+                  <a href="{% url 'carbook:contact' %}" class="btn btn-primary py-2 mr-1">Inquire Now</a>
+                  <a href="{% url 'carbook:services' %}" class="btn btn-secondary py-2 ml-1">Details</a>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div class="item">
+            <div class="car-wrap rounded ftco-animate">
+              <div class="img rounded d-flex align-items-end"
+                   style="background-image: url({% static 'images/villa.jpg' %});">
+              </div>
+              <div class="text">
+                <h2 class="mb-0"><a href="{% url 'carbook:car' %}">Villa & Home Lifts</a></h2>
+                <div class="d-flex mb-3">
+                  <span class="cat">Compact & Luxury Solutions</span>
+                </div>
+                <p class="d-flex mb-0 d-block">
+                  <a href="{% url 'carbook:contact' %}" class="btn btn-primary py-2 mr-1">Inquire Now</a>
+                  <a href="{% url 'carbook:services' %}" class="btn btn-secondary py-2 ml-1">Details</a>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 4 -->
+          <div class="item">
+            <div class="car-wrap rounded ftco-animate">
+              <div class="img rounded d-flex align-items-end"
+                   style="background-image: url({% static 'images/esqulater.jpg' %});">
+              </div>
+              <div class="text">
+                <h2 class="mb-0"><a href="{% url 'carbook:car' %}">Commercial Escalators</a></h2>
+                <div class="d-flex mb-3">
+                  <span class="cat">Heavy Duty & Energy Efficient</span>
+                </div>
+                <p class="d-flex mb-0 d-block">
+                  <a href="{% url 'carbook:contact' %}" class="btn btn-primary py-2 mr-1">Inquire Now</a>
+                  <a href="{% url 'carbook:services' %}" class="btn btn-secondary py-2 ml-1">Details</a>
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div> <!-- /.carousel-car -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section class="ftco-section ftco-about">
+  <div class="container">
+    <div class="row no-gutters">
+      <div class="col-md-6 p-md-5 img img-2 d-flex justify-content-center align-items-center"
+           style="background-image: url({% static 'images/istockphoto-1141448000-612x612.jpg' %});">
+      </div>
+      <div class="col-md-6 wrap-about ftco-animate">
+        <div class="heading-section heading-section-white pl-md-5">
+          <span class="subheading">About Us</span>
+          <h2 class="mb-4">Welcome to Hekmat Al Maadey</h2>
+
+          <p>
+            We are dedicated to providing comprehensive vertical transportation solutions, including expert installation, preventive maintenance, modernization, and emergency repair services for elevators and escalators.
+          </p>
+          <p>
+            Our certified engineering team ensures that every system adheres to international safety standards, delivering reliable performance, comfort, and energy efficiency for commercial, residential, and industrial properties.
+          </p>
+          <p>
+            <a href="{% url 'carbook:about' %}" class="btn btn-primary py-3 px-4">Read More About Us</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Counter Section -->
+<section class="ftco-counter ftco-section img bg-light" id="section-counter">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate">
+        <div class="block-18">
+          <div class="text text-border d-flex align-items-center">
+            <strong class="number" data-number="15">0</strong>
+            <span>Years of <br>Experience</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate">
+        <div class="block-18">
+          <div class="text text-border d-flex align-items-center">
+            <strong class="number" data-number="500">0</strong>
+            <span>Elevators <br>Installed</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate">
+        <div class="block-18">
+          <div class="text text-border d-flex align-items-center">
+            <strong class="number" data-number="1200">0</strong>
+            <span>Happy <br>Clients</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate">
+        <div class="block-18">
+          <div class="text d-flex align-items-center">
+            <strong class="number" data-number="24">0</strong>
+            <span>Hours <br>Support</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

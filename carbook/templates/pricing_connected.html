@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<!-- Pricing page content here -->
+<section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('{% static "images/bg_3.jpg" %}');" data-stellar-background-ratio="0.5">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-start">
+      <div class="col-md-9 ftco-animate pb-5">
+        <p class="breadcrumbs"><span class="mr-2"><a href="{% url 'index' %}">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Pricing <i class="ion-ios-arrow-forward"></i></span></p>
+        <h1 class="mb-3 bread">Pricing</h1>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ftco-section ftco-cart">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 ftco-animate">
+        <div class="car-list">
+          <table class="table">
+            <thead class="thead-primary">
+              <tr class="text-center">
+                <th>&nbsp;</th>
+                <th>&nbsp;</th>
+                <th class="bg-primary heading">Per Hour Rate</th>
+                <th class="bg-dark heading">Per Day Rate</th>
+                <th class="bg-black heading">Leasing</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Pricing rows here -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

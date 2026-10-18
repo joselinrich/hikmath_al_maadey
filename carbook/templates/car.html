@@ -1,0 +1,322 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Our Products - Hekmat Al Maadey</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- Tab Favicon Icon -->
+    <link rel="icon" type="image/png" href="{% static 'images/logo.png' %}">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'css/open-iconic-bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+    
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/ionicons.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap-datepicker.css' %}">
+    <link rel="stylesheet" href="{% static 'css/jquery.timepicker.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  </head>
+  <body>
+    
+	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container">
+	      <!-- Updated Navbar Brand with Logo Image -->
+	      <a class="navbar-brand d-flex align-items-center" href="{% url 'carbook:index' %}">
+	        <img src="{% static 'images/logo.png' %}" alt="Logo" style="height: 40px; width: auto; margin-right: 10px; object-fit: contain;">
+	        <span>HEKMAT AL MAADEY</span>
+	      </a>
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto">
+	          <li class="nav-item"><a href="{% url 'carbook:index' %}" class="nav-link">Home</a></li>
+	          <li class="nav-item"><a href="{% url 'carbook:about' %}" class="nav-link">About</a></li>
+	          <li class="nav-item"><a href="{% url 'carbook:services' %}" class="nav-link">Services</a></li>
+	          <li class="nav-item"><a href="{% url 'carbook:pricing' %}" class="nav-link">Pricing</a></li>
+	          <li class="nav-item active"><a href="{% url 'carbook:car' %}" class="nav-link">Products</a></li>
+	          <li class="nav-item"><a href="{% url 'carbook:blog' %}" class="nav-link">Blog</a></li>
+	          <li class="nav-item"><a href="{% url 'carbook:contact' %}" class="nav-link">Contact</a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+    <!-- END nav -->
+    
+    <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('{% static 'images/istockphoto-2232356780-612x612.jpg' %}');" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-start">
+          <div class="col-md-9 ftco-animate pb-5">
+          	<p class="breadcrumbs"><span class="mr-2"><a href="{% url 'carbook:index' %}">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Products <i class="ion-ios-arrow-forward"></i></span></p>
+            <h1 class="mb-3 bread">Our Elevator & Escalator Systems</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+		
+
+		<section class="ftco-section bg-light">
+    	<div class="container">
+    		<div class="row">
+
+    			<!-- Product 1 -->
+    			<div class="col-md-4">
+    				<div class="car-wrap rounded ftco-animate">
+    					<div class="img rounded d-flex align-items-end" style="background-image: url('{% static 'images/istockphoto-2179987748-612x612.jpg' %}');">
+    					</div>
+    					<div class="text">
+    						<h2 class="mb-0"><a href="#">Passenger Elevator</a></h2>
+    						<div class="d-flex mb-3">
+	    						<span class="cat">High-Speed & Gearless</span>
+	    						<p class="price ml-auto">Commercial</p>
+    						</div>
+    						<p class="d-flex mb-0 d-block"><a href="{% url 'carbook:contact' %}" class="btn btn-primary py-2 mr-1">Inquire Now</a> <a href="{% url 'carbook:services' %}" class="btn btn-secondary py-2 ml-1">Details</a></p>
+    					</div>
+    				</div>
+    			</div>
+
+    			<!-- Product 2 -->
+    			<div class="col-md-4">
+    				<div class="car-wrap rounded ftco-animate">
+    					<div class="img rounded d-flex align-items-end" style="background-image: url('{% static 'images/glass.jpg' %}');">
+    					</div>
+    					<div class="text">
+    						<h2 class="mb-0"><a href="#">Panoramic Glass Lift</a></h2>
+    						<div class="d-flex mb-3">
+	    						<span class="cat">Architectural Luxury</span>
+	    						<p class="price ml-auto">Residential/Mall</p>
+    						</div>
+    						<p class="d-flex mb-0 d-block"><a href="{% url 'carbook:contact' %}" class="btn btn-primary py-2 mr-1">Inquire Now</a> <a href="{% url 'carbook:services' %}" class="btn btn-secondary py-2 ml-1">Details</a></p>
+    					</div>
+    				</div>
+    			</div>
+
+    			<!-- Product 3 -->
+    			<div class="col-md-4">
+    				<div class="car-wrap rounded ftco-animate">
+    					<div class="img rounded d-flex align-items-end" style="background-image: url('{% static 'images/istockphoto-526536845-612x612.jpg' %}');">
+    					</div>
+    					<div class="text">
+    						<h2 class="mb-0"><a href="#">Villa Home Lift</a></h2>
+    						<div class="d-flex mb-3">
+	    						<span class="cat">Compact & Low Power</span>
+	    						<p class="price ml-auto">Residential</p>
+    						</div>
+    						<p class="d-flex mb-0 d-block"><a href="{% url 'carbook:contact' %}" class="btn btn-primary py-2 mr-1">Inquire Now</a> <a href="{% url 'carbook:services' %}" class="btn btn-secondary py-2 ml-1">Details</a></p>
+    					</div>
+    				</div>
+    			</div>
+
+    			<!-- Product 4 -->
+    			<div class="col-md-4">
+    				<div class="car-wrap rounded ftco-animate">
+    					<div class="img rounded d-flex align-items-end" style="background-image: url('{% static 'images/pexels-micomedel-37735253.jpg' %}');">
+    					</div>
+    					<div class="text">
+    						<h2 class="mb-0"><a href="#">Commercial Escalator</a></h2>
+    						<div class="d-flex mb-3">
+	    						<span class="cat">Heavy Duty Transit</span>
+	    						<p class="price ml-auto">Public Places</p>
+    						</div>
+    						<p class="d-flex mb-0 d-block"><a href="{% url 'carbook:contact' %}" class="btn btn-primary py-2 mr-1">Inquire Now</a> <a href="{% url 'carbook:services' %}" class="btn btn-secondary py-2 ml-1">Details</a></p>
+    					</div>
+    				</div>
+    			</div>
+
+    			<!-- Product 5 -->
+    			<div class="col-md-4">
+    				<div class="car-wrap rounded ftco-animate">
+    					<div class="img rounded d-flex align-items-end" style="background-image: url('{% static 'images/istockphoto-115906082-612x612.jpg' %}');">
+    					</div>
+    					<div class="text">
+    						<h2 class="mb-0"><a href="#">Cargo & Freight Lift</a></h2>
+    						<div class="d-flex mb-3">
+	    						<span class="cat">High Capacity Load</span>
+	    						<p class="price ml-auto">Industrial</p>
+    						</div>
+    						<p class="d-flex mb-0 d-block"><a href="{% url 'carbook:contact' %}" class="btn btn-primary py-2 mr-1">Inquire Now</a> <a href="{% url 'carbook:services' %}" class="btn btn-secondary py-2 ml-1">Details</a></p>
+    					</div>
+    				</div>
+    			</div>
+
+    			<!-- Product 6 -->
+    			<div class="col-md-4">
+    				<div class="car-wrap rounded ftco-animate">
+    					<div class="img rounded d-flex align-items-end" style="background-image: url('{% static 'images/istockphoto-2149025784-612x612.jpg' %}');">
+    					</div>
+    					<div class="text">
+    						<h2 class="mb-0"><a href="#">Hospital Stretcher Lift</a></h2>
+    						<div class="d-flex mb-3">
+	    						<span class="cat">Smooth & Precise Leveling</span>
+	    						<p class="price ml-auto">Healthcare</p>
+    						</div>
+    						<p class="d-flex mb-0 d-block"><a href="{% url 'carbook:contact' %}" class="btn btn-primary py-2 mr-1">Inquire Now</a> <a href="{% url 'carbook:services' %}" class="btn btn-secondary py-2 ml-1">Details</a></p>
+    					</div>
+    				</div>
+    			</div>
+
+    			<!-- Product 7 -->
+    			<div class="col-md-4">
+    				<div class="car-wrap rounded ftco-animate">
+    					<div class="img rounded d-flex align-items-end" style="background-image: url('{% static 'images/pexels-amalia-cember-2155877888-34457821.jpg' %}');">
+    					</div>
+    					<div class="text">
+    						<h2 class="mb-0"><a href="#">Moving Walkways (Travelators)</a></h2>
+    						<div class="d-flex mb-3">
+	    						<span class="cat">Continuous Flow</span>
+	    						<p class="price ml-auto">Airports & Malls</p>
+    						</div>
+    						<p class="d-flex mb-0 d-block"><a href="{% url 'carbook:contact' %}" class="btn btn-primary py-2 mr-1">Inquire Now</a> <a href="{% url 'carbook:services' %}" class="btn btn-secondary py-2 ml-1">Details</a></p>
+    					</div>
+    				</div>
+    			</div>
+
+    			<!-- Product 8 -->
+    			<div class="col-md-4">
+    				<div class="car-wrap rounded ftco-animate">
+    					<div class="img rounded d-flex align-items-end" style="background-image: url('{% static 'images/istockphoto-2191641029-612x612.jpg' %}');">
+    					</div>
+    					<div class="text">
+    						<h2 class="mb-0"><a href="#">Dumbwaiter Lift</a></h2>
+    						<div class="d-flex mb-3">
+	    						<span class="cat">Food & Small Goods Transfer</span>
+	    						<p class="price ml-auto">Restaurants/Hotels</p>
+    						</div>
+    						<p class="d-flex mb-0 d-block"><a href="{% url 'carbook:contact' %}" class="btn btn-primary py-2 mr-1">Inquire Now</a> <a href="{% url 'carbook:services' %}" class="btn btn-secondary py-2 ml-1">Details</a></p>
+    					</div>
+    				</div>
+    			</div>
+
+    			<!-- Product 9 -->
+    			<div class="col-md-4">
+    				<div class="car-wrap rounded ftco-animate">
+    					<div class="img rounded d-flex align-items-end" style="background-image: url('{% static 'images/istockphoto-486768159-612x612.jpg' %}');">
+    					</div>
+    					<div class="text">
+    						<h2 class="mb-0"><a href="#">Machine Roomless (MRL) Lift</a></h2>
+    						<div class="d-flex mb-3">
+	    						<span class="cat">Space Saving & VVVF Drive</span>
+	    						<p class="price ml-auto">Modern Buildings</p>
+    						</div>
+    						<p class="d-flex mb-0 d-block"><a href="{% url 'carbook:contact' %}" class="btn btn-primary py-2 mr-1">Inquire Now</a> <a href="{% url 'carbook:services' %}" class="btn btn-secondary py-2 ml-1">Details</a></p>
+    					</div>
+    				</div>
+    			</div>
+
+    		</div>
+
+    		<div class="row mt-5">
+          <div class="col text-center">
+            <div class="block-27">
+              <ul>
+                <li><a href="#">&lt;</a></li>
+                <li class="active"><span>1</span></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">&gt;</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    	</div>
+    </section>
+    
+
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2"><a href="#" class="logo">Hekmat <span>Al Maadey</span></a></h2>
+              <p>Elevator & Escalators Inst. & Maint. LLC - Premium vertical transportation solutions built for safety, durability, and comfort.</p>
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4 ml-md-5">
+              <h2 class="ftco-heading-2">Information</h2>
+              <ul class="list-unstyled">
+                <li><a href="{% url 'carbook:about' %}" class="py-2 d-block">About Us</a></li>
+                <li><a href="{% url 'carbook:services' %}" class="py-2 d-block">Services</a></li>
+                <li><a href="#" class="py-2 d-block">Terms and Conditions</a></li>
+                <li><a href="#" class="py-2 d-block">Safety Compliance</a></li>
+                <li><a href="#" class="py-2 d-block">Privacy Policy</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+             <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Customer Support</h2>
+              <ul class="list-unstyled">
+                <li><a href="#" class="py-2 d-block">FAQ</a></li>
+                <li><a href="#" class="py-2 d-block">AMC Options</a></li>
+                <li><a href="#" class="py-2 d-block">24/7 Breakdown Support</a></li>
+                <li><a href="{% url 'carbook:contact' %}" class="py-2 d-block">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+            	<h2 class="ftco-heading-2">Have Questions?</h2>
+            	<div class="block-23 mb-3">
+	              <ul>
+	                <li><span class="icon icon-map-marker"></span><span class="text">Sharjah,U.A.E</span></li>
+	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+971 555241246</span></a></li>
+	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">hameellc@gmail.com</span></a></li>
+	              </ul>
+	            </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <p>
+             <script>document.write(new Date().getFullYear());</script> | Hekmat Al Maadey
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+  <script src="{% static 'js/jquery.min.js' %}"></script>
+  <script src="{% static 'js/jquery-migrate-3.0.1.min.js' %}"></script>
+  <script src="{% static 'js/popper.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+  <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+  <script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+  <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+  <script src="{% static 'js/aos.js' %}"></script>
+  <script src="{% static 'js/jquery.animateNumber.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap-datepicker.js' %}"></script>
+  <script src="{% static 'js/jquery.timepicker.min.js' %}"></script>
+  <script src="{% static 'js/scrollax.min.js' %}"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="{% static 'js/google-map.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
+    
+  </body>
+</html>

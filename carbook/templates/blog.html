@@ -1,0 +1,155 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Blog & Elevator Guides - Hekamat Al Maadey{% endblock %}
+
+{% block content %}
+<!-- Navbar பகுதி நீக்கப்பட்டுவிட்டது (base.html-லிருந்து தானாக எடுத்துக்கொள்ளும்) -->
+
+<section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('{% static "images\istockphoto-2232356780-612x612.jpg" %}');" data-stellar-background-ratio="0.5">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-start">
+      <div class="col-md-9 ftco-animate pb-5">
+        <p class="breadcrumbs">
+          <span class="mr-2"><a href="{% url 'carbook:index' %}">Home <i class="ion-ios-arrow-forward"></i></a></span> 
+          <span>Blog <i class="ion-ios-arrow-forward"></i></span>
+        </p>
+        <h1 class="mb-3 bread">Elevator Insights & Technical News</h1>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ftco-section">
+  <div class="container">
+    <div class="row d-flex justify-content-center">
+      
+      <!-- Article 1 -->
+      <div class="col-md-12 text-center d-flex ftco-animate">
+        <div class="blog-entry justify-content-end mb-md-5">
+          <a href="{% url 'carbook:blog-single' %}" class="block-20 img" style="background-image: url('{% static "images\istockphoto-2249532907-612x612.jpg" %}');">
+          </a>
+          <div class="text px-md-5 pt-4">
+            <div class="meta mb-3">
+              <div><a href="#">Oct. 01, 2026</a></div>
+              <div><a href="#">Engineering Team</a></div>
+              <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 5</a></div>
+            </div>
+            <h3 class="heading mt-2"><a href="{% url 'carbook:blog-single' %}">Essential Safety Checklist for Commercial Elevator Maintenance</a></h3>
+            <p>Regular preventive maintenance ensures maximum safety and smooth performance. Learn about crucial safety inspections required for modern high-rise elevator systems.</p>
+            <p><a href="{% url 'carbook:blog-single' %}" class="btn btn-primary">Read More <span class="icon-long-arrow-right"></span></a></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Article 2 -->
+      <div class="col-md-12 text-center d-flex ftco-animate">
+        <div class="blog-entry justify-content-end mb-md-5">
+          <a href="{% url 'carbook:blog-single' %}" class="block-20 img" style="background-image: url('{% static "images\istockphoto-2248890862-612x612.jpg" %}');">
+          </a>
+          <div class="text px-md-5 pt-4">
+            <div class="meta mb-3">
+              <div><a href="#">Sep. 28, 2026</a></div>
+              <div><a href="#">Technical Team</a></div>
+              <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 2</a></div>
+            </div>
+            <h3 class="heading mt-2"><a href="{% url 'carbook:blog-single' %}">When Should You Modernize Your Older Elevator System?</a></h3>
+            <p>Upgrading control panels, door drives, and VVVF inverter systems can reduce energy consumption and operational downtime significantly.</p>
+            <p><a href="{% url 'carbook:blog-single' %}" class="btn btn-primary">Read More <span class="icon-long-arrow-right"></span></a></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Article 3 -->
+      <div class="col-md-12 text-center d-flex ftco-animate">
+        <div class="blog-entry justify-content-end mb-md-5">
+          <a href="{% url 'carbook:blog-single' %}" class="block-20 img" style="background-image: url('{% static "images\pexels-salman-haris-513980394-16383996.jpg" %}');">
+          </a>
+          <div class="text px-md-5 pt-4">
+            <div class="meta mb-3">
+              <div><a href="#">Sep. 15, 2026</a></div>
+              <div><a href="#">Safety Department</a></div>
+              <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 4</a></div>
+            </div>
+            <h3 class="heading mt-2"><a href="{% url 'carbook:blog-single' %}">How Automatic Rescue Devices (ARD) Safeguard Passengers During Power Failures</a></h3>
+            <p>Discover how integrated ARD units automatically bring elevators to the nearest floor safely during emergency power cuts.</p>
+            <p><a href="{% url 'carbook:blog-single' %}" class="btn btn-primary">Read More <span class="icon-long-arrow-right"></span></a></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Article 4 -->
+      <div class="col-md-12 text-center d-flex ftco-animate">
+        <div class="blog-entry justify-content-end mb-md-5">
+          <a href="{% url 'carbook:blog-single' %}" class="block-20 img" style="background-image: url('{% static "images\istockphoto-526536845-612x612.jpg" %}');">
+          </a>
+          <div class="text px-md-5 pt-4">
+            <div class="meta mb-3">
+              <div><a href="#">Aug. 20, 2026</a></div>
+              <div><a href="#">Design Team</a></div>
+              <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 1</a></div>
+            </div>
+            <h3 class="heading mt-2"><a href="{% url 'carbook:blog-single' %}">Choosing the Right Panoramic Villa Lift for Modern Homes</a></h3>
+            <p>Explore luxury glass designs, gearless traction systems, and space-saving options tailored for modern luxury residential buildings.</p>
+            <p><a href="{% url 'carbook:blog-single' %}" class="btn btn-primary">Read More <span class="icon-long-arrow-right"></span></a></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Article 5 -->
+      <div class="col-md-12 text-center d-flex ftco-animate">
+        <div class="blog-entry justify-content-end mb-md-5">
+          <a href="{% url 'carbook:blog-single' %}" class="block-20 img" style="background-image: url('{% static "images\istockphoto-2231812191-612x612.jpg" %}');">
+          </a>
+          <div class="text px-md-5 pt-4">
+            <div class="meta mb-3">
+              <div><a href="#">Aug. 05, 2026</a></div>
+              <div><a href="#">Service Team</a></div>
+              <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 6</a></div>
+            </div>
+            <h3 class="heading mt-2"><a href="{% url 'carbook:blog-single' %}">Importance of Annual Maintenance Contracts (AMC) for Escalators</a></h3>
+            <p>Prevent unexpected repairs and maintain smooth passenger flow in commercial malls with routine maintenance and lubrication schedules.</p>
+            <p><a href="{% url 'carbook:blog-single' %}" class="btn btn-primary">Read More <span class="icon-long-arrow-right"></span></a></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Article 6 -->
+      <div class="col-md-12 text-center d-flex ftco-animate">
+        <div class="blog-entry">
+          <a href="{% url 'carbook:blog-single' %}" class="block-20 img" style="background-image: url('{% static "images\704ee0269cc6ce82b5e49ee820443047.png" %}');">
+          </a>
+          <div class="text px-md-5 pt-4">
+            <div class="meta mb-3">
+              <div><a href="#">Jul. 18, 2026</a></div>
+              <div><a href="#">Admin</a></div>
+              <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
+            </div>
+            <h3 class="heading mt-2"><a href="{% url 'carbook:blog-single' %}">Energy Efficient Elevator Drives & Integrated Controllers</a></h3>
+            <p>Learn how modern elevator integrated drives optimize power performance and provide smooth acceleration and floor alignment.</p>
+            <p><a href="{% url 'carbook:blog-single' %}" class="btn btn-primary">Read More <span class="icon-long-arrow-right"></span></a></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Pagination -->
+    <div class="row mt-5">
+      <div class="col text-center">
+        <div class="block-27">
+          <ul>
+            <li><a href="#">&lt;</a></li>
+            <li class="active"><span>1</span></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">&gt;</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+{% endblock %}
